@@ -1,124 +1,77 @@
-<h1 align="center">J.A.R.V.I.S </h1> 
+# J.A.R.V.I.S (Just A Rather Very Intelligent System) - React Edition
 
-<div align="center">
-  
-[![Welcome to my profile](https://img.shields.io/badge/Hello,Devs!-Welcome-blue.svg?style=flat&logo=github)](https://github.com/gauravsingh9356/J.A.R.V.I.S)
-[![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/gauravsingh9356/J.A.R.V.I.S)
- [![GitHub issues](https://img.shields.io/github/issues/GauravSingh9356/J.A.R.V.I.S)](https://github.com/GauravSingh9356/J.A.R.V.I.S/issues)
-![Stars](https://img.shields.io/github/stars/gauravsingh9356/J.A.R.V.I.S?style=flat&logo=github)
-![Forks](https://img.shields.io/github/forks/gauravsingh9356/J.A.R.V.I.S?style=flat&logo=github)
-[![GitHub license](https://img.shields.io/github/license/GauravSingh9356/J.A.R.V.I.S)](https://github.com/GauravSingh9356/J.A.R.V.I.S/blob/master/LICENSE)
-  
-[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
+A web-based AI assistant and futuristic Iron Man holographic HUD rewritten from the original Python assistant repository into a modern React + TypeScript + Vite application.
 
-  </div>
+![J.A.R.V.I.S HUD](jarvis1.jpg)
 
+## Features Ported & Engineered
 
+1. **Neural Voice & Conversational Assistant**:
+   - Web Speech API integration with real-time speech recognition (mic input) and text-to-speech voice synthesis.
+   - Persona switcher: toggle between **J.A.R.V.I.S** (authoritative British male voice) and **F.R.I.D.A.Y** (tactical female voice).
+   - Conversational command engine with natural language intent detection:
+     - *"Jarvis are you there?"* -> Status verification
+     - *"Who made you?"* / *"Your master"* -> Creator acknowledgement (Gaurav / Master)
+     - *"What does J.A.R.V.I.S stand for?"* -> Acronym explanation
+     - *"What is the time?"* -> System clock readout
+     - *"Check CPU & battery"* -> Live hardware diagnostics
+     - *"Tell me a joke"* -> PyJokes programming humor generator
+     - *"Search Wikipedia [topic]"* -> Wikipedia summary extractor
+     - *"Take a screenshot"* -> Screen display snapshot
+     - Fast command bar and direct execution chips
 
-<img src="jarvis1.jpg"/>
+2. **Optical Face Recognition & Biometric Access (LBPH + Haar Cascade)**:
+   - Live camera stream with biometric facial target reticle and laser sweep overlay.
+   - LBPH confidence score calculation and master user recognition ("Gaurav").
+   - Training sample generator preview (30 samples) and manual bypass mode.
 
-### Requirements:
+3. **Intelligent Sensing Dictionary with Typo Correction**:
+   - Word definitions powered by local lexicon dataset and dictionary API.
+   - Levenshtein distance typo detection (re-implementing Python's `difflib.get_close_matches`).
+   - "Did you mean [Suggestion]?" interactive verification and speech recitation.
 
-<li>datetime</li>
-<li>os</li>
-<li> pyttsx3</li>
-<li> wikipedia</li>
-<li> speech_recognition </li>
-<li> webbrowser</li>
-<li> sys</li>
-<li> smtplib</li>
-<li>requests</li>
-<li>json</li>
-<li>defflib</li>
-<li>geocoder</li>
-<li>pyjokes</li>
-<li>psutil</li>
-<li> pyautogui</li>
-<li> opencv</li>
+4. **Intelligence & News Feed**:
+   - Headlining news feed inspired by The Times Of India.
+   - Broadcast audio mode reading headlines sequentially with voice synthesis.
 
-<h2>Required Packages</h2>
+5. **Atmospheric & Geolocation Radar**:
+   - Open-Meteo live API integration with GPS coordinates.
+   - Temperature (°C), humidity (%), wind speed (m/s), and atmospheric condition report.
+   - Direct Google Maps coordinate navigation.
 
-```
-pip install -r requirements.txt
-```
+6. **YouTube Stream Downloader**:
+   - Re-implementation of the original PyTube Tkinter desktop GUI in React.
+   - Video metadata inspector (author, duration, views in millions, file size in MB).
+   - Download progress simulation with percentage updates and MP4/MP3 format selector.
 
-> _ To install PyAudio on windows head over to https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyaudio and download the .whl for your machine and run the installation as shown below, then install the remaining dependencies from the requirements.txt file. You may remove pyAduio from the requirements file if it interrupts your installation (its there for unix users)
+7. **Optical Character Recognition (OCR Scanner)**:
+   - Computer vision OCR scanner inspired by `OCR.py` (Tesseract + OpenCV).
+   - Green bounding boxes around recognized text with confidence scores.
+   - Image upload and sample blueprints analysis with text-to-speech readout.
+
+8. **Amazon Price Radar & Email Alert**:
+   - Monitored product tracker (WOW Skin Science Face Wash from `amazon.py`).
+   - Price drop threshold monitoring and automated SMTP email dispatch simulation.
+
+9. **Persistent Memory Vault (`data.txt`)**:
+   - Remembers user notes (initialized with *"I have to wake up early in the morning"*).
+   - Add, delete, and recall memories via voice or interface.
+
+10. **System Telemetry & Hardware Diagnostics (`psutil`)**:
+    - CPU load meter, battery gauge with charging status, RAM buffer, and operating system detection.
+
+## Tech Stack
+
+- **Framework**: React 18, TypeScript, Vite
+- **Styling**: Tailwind CSS, Holographic HUD shaders & animations
+- **Audio & Speech**: Web Audio API Sound Synthesizer, Web Speech API (SpeechRecognition & SpeechSynthesis)
+- **Icons**: Lucide React
+
+## Running the Application
+
 ```bash
-pip install PyAudio‑0.2.11‑cp<version>‑cp<version>m‑win_amd<architecture>.whl
+npm install
+npm run dev
 ```
 
-### On Ubuntu based Linux distribution you need to install the following packages, so that the code works:
-
-```
-sudo apt-get update && sudo apt-get install espeak
-
-```
-
-### What it does...
-
-  <ul>
-   <li>Dynamic Authentication using Optical Face Recognition</li>
-<li>Send emails</li>
-  <li>Dynamic News Reporting at any time with api integration</li>
-  <li>Todo list generator, Yes it remembers all!</li> 
-<li>Open any website with just a voice command</li>
-<li>Plays Music</li>
-<li>Tells time</li>
-<li>Wikipedia powered AI</li>
-<li>Dictionary with Intelligent Sensing i.e. auto checking if spell mistake</li>
-<li>Weather Report such as temp, wind speed, humidity, weather description</li>
-<li>Latitude and longitude</li>
- <li>YouTube searching</li> 
- <li>Google Map searching</a>
- <li>YouTube Downloader, download any youtube video by just putting url of video</li>
- <li>Now Master can switch b/w J.A.R.V.I.S and F.R.I.D.A.Y, switch to female voice assistant</li>
-</ul>
-
-<table>
-  <tr>
-    <td><img src="images/Screenshot%20(138).png"/></td>
-      <td><img src="https://github.com/GauravSingh9356/J.A.R.V.I.S/blob/master/images/face-600x900.png"/></td>
-    
-
-</tr>
-<tr>
-<td><img src="images/email.jpg"/></td>
-<td><img src="https://github.com/GauravSingh9356/J.A.R.V.I.S/blob/master/images/maxresdefault.jpg"/></td>
-</tr>
-<td><img src="https://github.com/GauravSingh9356/J.A.R.V.I.S/blob/master/images/4-Best-Weather-Forecast-APIs-for-Development-of-Weather-Apps-624x304.jpeg"/></td>
-  <td><img src="https://github.com/GauravSingh9356/J.A.R.V.I.S/blob/master/images/maxresdefault%20(1).jpg"/></td>
-</tr>
-<tr>
-  <td><img src="canny.jpg"/>
-          </td>
-  <td><img src="ImgContor.jpg"/>
-          </td>
-</tr>
-</table>
-
-## Some Sneak peeks:
-
-<ul>
-  <li><h2> Jarvis, Are you there?</h2></li>
-  <li><h2> At your service, Sir</h2></li>
-  
-  <li><h2> Jarvis, What are today's news headlines? can you tell?</h2></li>
-  <li><h2>Ofcourse, Sir -> Then news headlines   Would you like to visit the news url?</h2></li>
-  
-  <li><h2> Search Youtube</h2></li>
-  <li><h2>What you want to search, Sir</h2></li>
-  <li><h2>Coding for kids</h2></li>
-  <li><h2> Opens youtube in browser with desired search query results </h2></li>
-  
-   <li><h2> Jarvis, Can you send email to Gaurav?</h2></li>
-  <li><h2>What I say sir, Sir</h2></li>
-   <li><h2>Gaurav is a good boy</h2></li>
-  <li><h2> Email is sent successfully, Sir</h2></li>
-  
-  # And so on....
-  
-<a href="https://techtalkswithgaurav.blogspot.com/2020/06/your-personal-assistant-jarvis.html" target="_blank">Read complete blog article</a>
-
-## Contribution:
-Thank you for your interest in contributing to our Repo! Pull requests are welcome. For fixing typos, please make a PR with your fixes. We are happy for every contribution.
-A lot can be done with this project. Core AI chatbot like functionality can be added. More python scripts can be associated. Pull requests for any such changes are accepted. Feel free to fork this project and make your own changes too.
+Dev server starts on `http://0.0.0.0:3000`.
